@@ -8,7 +8,7 @@ export const uploadImage = async(request, response) => {
     }
     try {
        const file = await FileModel.create(fileObj);
-       response.status(200).json({ path: `http://hariomchouhan/file/${file._id}` });
+       response.status(200).json({ path: `https://hariomchouhan/file/${file._id}` });
     } catch (error) {
         console.log(error.message);
         response.status(500).json({ error: error.message })
